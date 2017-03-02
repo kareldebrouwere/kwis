@@ -66,7 +66,7 @@ class Quiz(object):
             time.sleep(1)
         print ("ButtonPressed!!!" + newListenThread.buttonPressed)
         if newListenThread.buttonPressed == "red":
-            self.pageHMTL=self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.actionReset)
+            self.pageHTML=self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.actionReset)
             print (self.buttonRed)
             print (self.pageHTML)
             return self.pageHTML
