@@ -1,7 +1,10 @@
-import cherrypy
-import myListenThread
-
 import os
+
+import cherrypy
+
+from drukronde import myListenThread
+
+import time
 
 HTML = """<html>
           <head></head>
@@ -56,7 +59,7 @@ class Quiz(object):
 
     @cherrypy.expose
     def start(self):
-        newListenThread=myListenThread.myListenThread()
+        newListenThread= myListenThread.myListenThread()
         while newListenThread.buttonPressed==None:
             print("nothing happens")
             time.sleep(1)
