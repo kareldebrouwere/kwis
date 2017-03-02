@@ -13,7 +13,7 @@ class myListenThread(Thread):
     def __init__(self):
         ''' Constructor. '''
         Thread.__init__(self)
-        self.buttonPressed='none'
+        self.buttonPressed=None
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(17,GPIO.IN,pull_up_down = GPIO.PUD_UP)
         GPIO.setup(18,GPIO.IN,pull_up_down = GPIO.PUD_UP)
