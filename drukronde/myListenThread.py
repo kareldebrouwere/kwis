@@ -18,6 +18,7 @@ class myListenThread(Thread):
         GPIO.setup(2,GPIO.IN)
         GPIO.setup(3,GPIO.IN)
         GPIO.setup(4,GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        print("Thread created")
         pass
     
     def run(self):
