@@ -20,7 +20,7 @@ class Quiz(object):
 
     @cherrypy.expose
     def index(self):
-        return HTML.format(button1=self.buttonRed,button2=self.buttonGreen,button3=self.buttonGrey)
+        return HTML.format(button1=self.buttonRed,button2=self.buttonBlue,button3=self.buttonGrey)
 
 
 if __name__ == "__main__":
