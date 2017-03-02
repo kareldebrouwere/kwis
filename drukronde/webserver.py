@@ -5,14 +5,10 @@ import os
 HTML = """<html>
           <head></head>
           <body>
-            <form method="get" action="start">
-              {button}
-              <button type="submit">Start</button>
-            </form>
-            <form method="get" action="{actionForRed}">
-              <button type="submit">Toggle red LED</button>
-            </form>
-          </body>
+            {button1}
+            {button2}
+            {button3}
+        </body>
         </html>"""
 
 
@@ -24,7 +20,7 @@ class Quiz(object):
 
     @cherrypy.expose
     def index(self):
-        return HTML.format(button=self.buttonRed,actionForRed="ternRedOn")
+        return HTML.format(button1=self.buttonRed,button2=self.buttonGreen,button3=self.buttonGrey)
 
 
 if __name__ == "__main__":
