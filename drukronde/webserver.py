@@ -29,4 +29,4 @@ class Quiz(object):
 
 if __name__ == "__main__":
     config = os.path.join(os.path.dirname(__file__),'cherrypy.conf')
-    cherrypy.quickstart(QUIZ(),config = config)
+    cherrypy.quickstart(Quiz(),config = config)
