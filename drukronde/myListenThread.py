@@ -15,9 +15,9 @@ class myListenThread(Thread):
         Thread.__init__(self)
         self.buttonPressed=None
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(17,GPIO.IN,pull_up_down = GPIO.PUD_UP)
-        GPIO.setup(18,GPIO.IN,pull_up_down = GPIO.PUD_UP)
-        GPIO.setup(21,GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        GPIO.setup(2,GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        GPIO.setup(3,GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        GPIO.setup(4,GPIO.IN,pull_up_down = GPIO.PUD_UP)
         pass
     
     def run(self):
@@ -30,17 +30,17 @@ class myListenThread(Thread):
         #    return
 
         while True:
-            if (GPIO.input(17)) == 0:
+            if (GPIO.input(2)) == 0:
                 self.buttonPressed = 'red'
                 #os.system('mpg321 buzzer.mp3 &')
                 print('red')
                 return
-            elif (GPIO.input(18)) == 0:
+            elif (GPIO.input(3)) == 0:
                 self.buttonPressed = 'green'
                 #os.system('mpg321 buzzer.mp3 &')
                 print('green')
                 return
-            elif (GPIO.input(21)) == 0:
+            elif (GPIO.input(4)) == 0:
                 self.buttonPressed = 'yellow'
                 #os.system('mpg321 buzzer.mp3 &')
                 print('yellow')
