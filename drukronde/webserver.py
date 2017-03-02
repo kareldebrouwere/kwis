@@ -6,12 +6,12 @@ HTML = """<html>
           <head></head>
           <body>
             <form>
-             {button1}
-             {button2}
-             {button3}
+              {button1}
+              {button2}
+              {button3}
             </form>
             <form>
-             {action}
+              {action}
             </form>
         </body>
         </html>"""
@@ -23,7 +23,7 @@ class Quiz(object):
         self.buttonBlue = """<img src="/static/buttonBlue.jpg" height="100" width="100">"""
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
-        self.action = """method="get" action="{actionForRed}">\n<button type="submit">Toggle red LED</button>"""
+        self.action = """method="get" action="{actionForRed}"><button type="submit">Toggle red LED</button>"""
 
     @cherrypy.expose
     def index(self):
