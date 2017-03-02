@@ -32,11 +32,12 @@ class Quiz(object):
                     </form>
                 </body>
                 </html>"""
-        self.HTML.format(button1=self.buttonGrey,button2=self.buttonGrey,button3=self.buttonGrey,action=self.action)
+
         self.buttonRed = """<img src="/static/buttonRed.jpg" height="100" width="100">"""
         self.buttonBlue = """<img src="/static/buttonBlue.jpg" height="100" width="100">"""
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
+        self.HTML.format(button1=self.buttonGrey, button2=self.buttonGrey, button3=self.buttonGrey, action=self.action)
         self.action = """<form method="get" action="displayRed">
             <button type="submit">Start</button>
             </form>
