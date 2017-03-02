@@ -45,8 +45,7 @@ class Quiz(object):
                            """
 
 
-        print (self.pageHTML)
-
+        
     @cherrypy.expose
     def index(self):
         print("running the index method")
