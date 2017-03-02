@@ -45,6 +45,8 @@ class myListenThread(Thread):
                 #os.system('mpg321 buzzer.mp3 &')
                 print('yellow')
                 return
+            else:
+                print("Still waiting")
             
         
                 
