@@ -50,7 +50,7 @@ class Quiz(object):
     @cherrypy.expose
     def displayRed(self):
         print ("In the red button loop")
-        self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action="")
+        self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action="self.action")
         self.index()
 
     @cherrypy.expose
