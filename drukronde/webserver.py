@@ -23,9 +23,9 @@ class Quiz(object):
                   <head></head>
                   <body>
                     <form>
-                      {button1}
-                      {button2}
-                      {button3}
+                      {pushbutton1}
+                      {pushbutton2}
+                      {pushbutton3}
                     </form>
                     <form>
                       {action}
@@ -41,7 +41,7 @@ class Quiz(object):
             <button type="submit">Start</button>
             </form>
             """
-        self.pageHTML = self.HTML.format(button1=self.buttonGrey, button2=self.buttonGrey, button3=self.buttonGrey, action=self.action)
+        self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey, pushbutton3=self.buttonGrey, action=self.action)
 
     @cherrypy.expose
     def index(self):
@@ -50,16 +50,16 @@ class Quiz(object):
     @cherrypy.expose
     def displayRed(self):
         print ("In the red button loop")
-        self.HTML.format(button1=self.buttonRed,button2=self.buttonGrey,button3=self.buttonGrey)
+        self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action="")
         self.index()
 
     @cherrypy.expose
     def displayBlue(self):
-        return HTML.format(button1=self.buttonGrey, button2=self.buttonBlue, button3=self.buttonGrey)
+        return HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonBlue, pushbutton3=self.buttonGrey)
 
     @cherrypy.expose
     def displayGeen(self):
-        return HTML.format(button1=self.buttonGrey, button2=self.buttonGrey, button3=self.buttonGreen)
+        return HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey, pushbutton3=self.buttonGreen)
 
 
 if __name__ == "__main__":
