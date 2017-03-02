@@ -1,4 +1,5 @@
 import cherrypy
+import myListenThread
 
 import os
 
@@ -35,7 +36,7 @@ class Quiz(object):
         self.buttonBlue = """<img src="/static/buttonBlue.jpg" height="100" width="100">"""
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
-        self.actionStart = """<form method="get" action="displayRed">
+        self.actionStart = """<form method="get" action="start">
                             <button type="submit">Start</button>
                             </form>
                     """
@@ -45,13 +46,22 @@ class Quiz(object):
                            """
 
 
-        
+
     @cherrypy.expose
     def index(self):
         print("running the index method")
         self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey,
                                          pushbutton3=self.buttonGrey, action=self.actionStart)
         return self.pageHTML
+
+    @cherrypy.expose
+    def start(self):
+        newListenThread=myListenThread.myListenThread()
+        while newListenThread.buttonPressed==None:
+            print("nothing happens")
+            time.sleep(1)
+        print ("ButtonPressed!!!" + newListenThread.buttonPressed)
+
 
     @cherrypy.expose
     def displayRed(self):
