@@ -15,7 +15,7 @@ HTML = """<html>
 class Quiz(object):
     def __init__(self):
         self.buttonRed = """<img src="/static/buttonRed.jpg" height="100" width="100">"""
-        self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
+        self.buttonBlue = """<img src="/static/buttonGreen.png" height="100" width="100">"""
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
 
     @cherrypy.expose
