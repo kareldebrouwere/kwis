@@ -35,10 +35,15 @@ class Quiz(object):
         self.buttonBlue = """<img src="/static/buttonBlue.jpg" height="100" width="100">"""
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
-        self.action = """<form method="get" action="displayRed">
+        self.actionStart = """<form method="get" action="displayRed">
                             <button type="submit">Start</button>
                             </form>
                     """
+        self.actionReset = """<form method="get" action="index">
+                                   <button type="submit">Reset</button>
+                                   </form>
+                           """
+
         self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey, pushbutton3=self.buttonGrey, action=self.action)
         print (self.pageHTML)
 
@@ -50,7 +55,7 @@ class Quiz(object):
     @cherrypy.expose
     def displayRed(self):
         print ("In the red button loop")
-        self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.action)
+        self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.actionReset)
         return self.pageHTML
 
     @cherrypy.expose
