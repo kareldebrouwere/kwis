@@ -29,7 +29,7 @@ class myListenThread(Thread):
         #if inputFromUser=="1":
         #    self.buttonPressed=True
         #    return
-
+        print ("the thread is now running")
         while True:
             if (GPIO.input(2)) == 0:
                 self.buttonPressed = 'red'
