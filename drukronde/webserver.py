@@ -61,7 +61,7 @@ class Quiz(object):
     def start(self):
         newListenThread= myListenThread()
         while newListenThread.buttonPressed==None:
-            print("nothing happens")
+            #print("nothing happens")
             time.sleep(1)
         print ("ButtonPressed!!!" + newListenThread.buttonPressed)
 
