@@ -15,8 +15,8 @@ class myListenThread(Thread):
         Thread.__init__(self)
         self.buttonPressed=None
         GPIO.setmode(GPIO.BCM)
-        GPIO.setup(2,GPIO.IN,pull_up_down = GPIO.PUD_UP)
-        GPIO.setup(3,GPIO.IN,pull_up_down = GPIO.PUD_UP)
+        GPIO.setup(2,GPIO.IN)
+        GPIO.setup(3,GPIO.IN)
         GPIO.setup(4,GPIO.IN,pull_up_down = GPIO.PUD_UP)
         pass
     
