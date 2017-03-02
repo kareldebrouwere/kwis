@@ -2,7 +2,7 @@ import os
 
 import cherrypy
 
-from drukronde import myListenThread
+from drukronde import myListenThread as myListenThread
 
 import time
 
