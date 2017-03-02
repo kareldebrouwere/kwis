@@ -38,7 +38,7 @@ class Quiz(object):
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
         self.action = """<form method="get" action="displayRed">
-                            <input type="text" value="8" name='test'/>
+                            <input type="text" value="displayRed" name='displayRed'/>
                             <button type="submit">Start</button>
                             </form>
                     """
@@ -49,7 +49,7 @@ class Quiz(object):
         return self.pageHTML
 
     @cherrypy.expose
-    def displayRed(self):
+    def displayRed(self,test):
         print ("In the red button loop")
         self.pageHTML = self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.action)
         self.index()
