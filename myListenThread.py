@@ -28,20 +28,21 @@ class myListenThread(Thread):
         #if inputFromUser=="1":
         #    self.buttonPressed=True
         #    return
+
         while True:
             if (GPIO.input(17)) == 0:
                 self.buttonPressed = 'red'
-                os.system('mpg321 buzzer.mp3 &')
+                #os.system('mpg321 buzzer.mp3 &')
                 print('red')
                 return
             elif (GPIO.input(18)) == 0:
                 self.buttonPressed = 'green'
-                os.system('mpg321 buzzer.mp3 &')
+                #os.system('mpg321 buzzer.mp3 &')
                 print('green')
                 return
             elif (GPIO.input(21)) == 0:
                 self.buttonPressed = 'yellow'
-                os.system('mpg321 buzzer.mp3 &')
+                #os.system('mpg321 buzzer.mp3 &')
                 print('yellow')
                 return
             
