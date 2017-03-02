@@ -33,6 +33,7 @@ class Quiz(object):
 
     @cherrypy.expose
     def displayRed(self):
+        print ("In the red button loop")
         return HTML.format(button1=self.buttonRed,button2=self.buttonGrey,button3=self.buttonGrey)
 
     @cherrypy.expose
