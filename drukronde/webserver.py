@@ -67,6 +67,7 @@ class Quiz(object):
         print ("ButtonPressed!!!" + newListenThread.buttonPressed)
         if newListenThread.buttonPressed == "red":
             self.pageHMTL=self.HTML.format(pushbutton1=self.buttonRed,pushbutton2=self.buttonGrey,pushbutton3=self.buttonGrey,action=self.actionReset)
+            print (self.pageHTML)
             return self.pageHTML
         elif newListenThread.buttonPressed == "green":
             self.pageHMTL = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGreen,
