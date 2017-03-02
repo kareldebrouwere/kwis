@@ -41,11 +41,11 @@ class Quiz(object):
             <button type="submit">Start</button>
             </form>
             """
-        self.HTML.format(button1=self.buttonGrey, button2=self.buttonGrey, button3=self.buttonGrey, action=self.action)
+        self.pageHTML = self.HTML.format(button1=self.buttonGrey, button2=self.buttonGrey, button3=self.buttonGrey, action=self.action)
 
     @cherrypy.expose
     def index(self):
-        return self.HTML
+        return self.pageHTML
 
     @cherrypy.expose
     def displayRed(self):
