@@ -71,11 +71,11 @@ class Quiz(object):
             print (self.pageHTML)
             return self.pageHTML
         elif newListenThread.buttonPressed == "green":
-            self.pageHMTL = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGreen,
+            self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGreen,
                                         pushbutton3=self.buttonGrey, action=self.actionReset)
             return self.pageHTML
         elif newListenThread.buttonPressed == "blue":
-            self.pageHMTL = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey,
+            self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey,
                                              pushbutton3=self.buttonBlue, action=self.actionReset)
             return self.pageHTML
 
