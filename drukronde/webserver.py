@@ -44,12 +44,14 @@ class Quiz(object):
                                    </form>
                            """
 
-        self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey, pushbutton3=self.buttonGrey, action=self.action)
+
         print (self.pageHTML)
 
     @cherrypy.expose
     def index(self):
         print("running the index method")
+        self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey,
+                                         pushbutton3=self.buttonGrey, action=self.actionStart)
         return self.pageHTML
 
     @cherrypy.expose
