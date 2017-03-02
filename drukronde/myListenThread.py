@@ -42,12 +42,10 @@ class myListenThread(Thread):
                 print('green')
                 return
             elif (GPIO.input(4)) == 0:
-                self.buttonPressed = 'yellow'
+                self.buttonPressed = 'blue'
                 #os.system('mpg321 buzzer.mp3 &')
                 print('yellow')
                 return
-            else:
-                print("Still waiting")
-            
+
         
                 
