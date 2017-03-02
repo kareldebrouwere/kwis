@@ -60,6 +60,7 @@ class Quiz(object):
     @cherrypy.expose
     def start(self):
         newListenThread= myListenThread()
+        newListenThread.start()
         while newListenThread.buttonPressed==None:
             #print("nothing happens")
             time.sleep(1)
