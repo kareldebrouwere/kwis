@@ -20,7 +20,7 @@ HTML = """<html>
 class Quiz(object):
     def __init__(self):
         self.HTML = """<html>
-                  <head></head>
+                  <head>Kwis Web Application</head>
                   <body>
                     <form>
                       {pushbutton1}
@@ -38,9 +38,10 @@ class Quiz(object):
         self.buttonGrey = """<img src="/static/buttonGrey.jpg" height="100" width="100">"""
         self.buttonGreen = """<img src="/static/buttonGreen.png" height="100" width="100">"""
         self.action = """<form method="get" action="displayRed">
-            <button type="submit">Start</button>
-            </form>
-            """
+                            <input type="text" value="8" name='test'/>
+                            <button type="submit">Start</button>
+                            </form>
+                    """
         self.pageHTML = self.HTML.format(pushbutton1=self.buttonGrey, pushbutton2=self.buttonGrey, pushbutton3=self.buttonGrey, action=self.action)
 
     @cherrypy.expose
